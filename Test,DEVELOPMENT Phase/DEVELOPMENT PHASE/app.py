@@ -1,4 +1,3 @@
-#LOGS
 #Program Initial HAS BEEN COMPLETED ON 05-01-2022
 
 import M1,M2,time
@@ -7,7 +6,7 @@ time.sleep(2)
 
 
 def app():
-    print("----------------------------BULK MESSEGING SYSTEM !!!------------------------- ")
+    print("----------------------------\ICMS/------------------------- ")
     print("Welcome User !! ")
     print("Login Time : ",time.ctime())
     print("1.Contact Management  ")
