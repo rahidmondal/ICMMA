@@ -1,5 +1,3 @@
-#This File Will Contain All The Things which needs to be runn before the actual program 
-#This File Will Run only for the first time ..
 #Warning : Possibility of Erasing all available Data ....(Please Use ONLY IN FIRST TIME OR SYSYTEM CLEANUP !!)
 """
 Program Status : Completed (06-01-2022).
