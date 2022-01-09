@@ -1,6 +1,6 @@
-#Program Initial HAS BEEN COMPLETED ON 05-01-2022
+#Neccessary Modules Below 
+
 import time,M1,M2
-print("Application Starting.......")
 time.sleep(2)
 
 def MM():
@@ -34,7 +34,8 @@ def MM():
         MM()
 
 
-def init():    
+def init(): 
+    print("Application Starting.......")   
     print("------------------------------Welcome User !!!-----------------------------------")   
     A = input("Please Enter USER_NAME :  ")
     if A == 'PUSHPAM' : 
