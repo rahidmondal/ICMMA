@@ -7,7 +7,6 @@ Author :
         1.RAHID MONDAL
         2.PUSHPAM JHA
 """
-from logging import INFO
 import time
 import mysql.connector
 import app
