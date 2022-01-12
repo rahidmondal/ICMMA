@@ -151,7 +151,7 @@ def Teacher():
                         print("Invalid Choice ")
                         Teacher()
                            
-        elif tch == 5 :
+        elif tch == 5 : #COMPLTED
                 CM()
       
 def student(): 
@@ -193,8 +193,7 @@ def student():
 
 
 
-
-def CM():
+def CM(): #COMPLETED
         print("--------------------------Contact Management-----------------------")
         print("""
         1.TEACHER

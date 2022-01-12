@@ -18,9 +18,15 @@ def MM():
 
     elif Ch == '2':
         print("Work In Progress ..")
+        MM()
 
     elif Ch == '3' :
-        print("Will Be Added Soon .....")       
+        with open("Manuel.txt")as f:
+            d = f.read()
+            print(d)
+            time.sleep(10)
+            MM()
+       
     elif Ch == '4':
         print("Logging Out...............")
         time.sleep(3)
