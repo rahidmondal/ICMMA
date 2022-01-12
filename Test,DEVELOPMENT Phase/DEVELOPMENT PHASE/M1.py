@@ -206,7 +206,7 @@ def student(): #COMPLETED
                         PHONE_NO = input("Phone Number : ")
                         Parents_Number = input("Parents Number : ")
                         email = input("Email : ")
-                        En = "insert into teacher values('{}','{}','{}','{}','{}','{}')".format(ID,F_NAME,Class,PHONE_NO,Parents_Number,email)
+                        En = "insert into STUDENT values('{}','{}','{}','{}','{}','{}')".format(ID,F_NAME,Class,PHONE_NO,Parents_Number,email)
                         DBC(En)
                         X = input("Do You Want To add more Data ?(Y/N) :  ")
                 time.sleep(5)
