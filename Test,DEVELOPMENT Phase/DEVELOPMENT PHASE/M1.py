@@ -62,7 +62,7 @@ def Teacher():
                 PHONE_NO = input("Phone Number : ")
                 Subject_Teaching = input("Intials of Subject Teaching : ")
                 Email = input("Email : ")
-                stm = "insert into teacher values('{}','{}','{}','{}','{}','{}' )".format(ID,F_NAME,C_Teacher,PHONE_NO,Subject_Teaching,Email)
+                stm = "insert into teacher values('{}','{}','{}','{}','{}','{}')".format(ID,F_NAME,C_Teacher,PHONE_NO,Subject_Teaching,Email)
                 DBC(stm)
 
 
@@ -76,7 +76,7 @@ def Teacher():
                 CM()
 
         
-def student(): #STUDNET ADD BUGGY 
+def student(): 
         print("...........................Student-Contacts....................")
         print("""
         1.ADD
@@ -94,7 +94,7 @@ def student(): #STUDNET ADD BUGGY
               PHONE_NO = input("Phone Number : ")
               Parents_Number = input("Parents Number : ")
               email = input("Email : ")
-              En = "insert into teacher values('{}','{}','{}','{}','{}','{}' )".format(ID,F_NAME,Class,PHONE_NO,Parents_Number,email)
+              En = "insert into teacher values('{}','{}','{}','{}','{}','{}')".format(ID,F_NAME,Class,PHONE_NO,Parents_Number,email)
               DBC(En)
 
         elif tch == 2 :
