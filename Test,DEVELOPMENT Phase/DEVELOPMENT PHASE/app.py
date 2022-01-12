@@ -3,38 +3,36 @@
 import time,M1,M2
 time.sleep(2)
 
+
 def MM():
     print("----------------------------\ICMS/------------------------- ")
     print("Welcome User !! ")
     print("1.Contact Management  ")
     print("2.Messege System      ")
-    print("3.LICENCE & CREDITS")
-    print("4.ABOUT THE APPLICATION+MANUEL")
-    print("5.Logout")
+    print("3.ABOUT THE APPLICATION+MANUEL")
+    print("4.Logout")
     Ch = input("Please Enter Your Choice : ")
     if Ch == '1':
         time.sleep(5)
         M1.CM()
+
     elif Ch == '2':
-        pass
-    elif Ch == '3':
-        print()
-    elif Ch == '4' :
-        print()
-    
-    elif Ch == '5':
+        print("Work In Progress ..")
+
+    elif Ch == '3' :
+        print("Will Be Added Soon .....")       
+    elif Ch == '4':
         print("Logging Out...............")
         time.sleep(3)
         print("Logout Succesfull At : ",time.ctime())
         print("**************************************************************************")
-        time.sleep(3)
+        time.sleep(100) #WILL AUTOMNATICALLY CLOSE IF NOT CLOSED WITHIN 100 SEC
  
     else : 
         print("Invalid Selection !!! ")
         MM()
 
-
-def init(): 
+def init(): #COMPLETED 
     print("Application Starting.......")   
     print("------------------------------Welcome User !!!-----------------------------------")   
     A = input("Please Enter USER_NAME :  ")
