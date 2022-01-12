@@ -34,7 +34,7 @@ def DBMS():
                 print("Creating Tables!")
                 mycursor.execute("""
                 CREATE TABLE teacher 
-                (ID int Not Null auto_increment,
+                (ID varchar(10) Not Null ,
                 F_NAME  varchar(50),
                 Class_Teacher  varchar(50),
                 PHONE_NO varchar(15),
@@ -50,7 +50,7 @@ def DBMS():
                     print("Craeting Table student")
                     time.sleep(5)
                     mycursor.execute("""CREATE TABLE student
-                                        (ID int Not Null auto_increment,
+                                        (ID varchar(10) Not Null ,
                                         F_NAME  varchar(50),
                                         Class  varchar(50),
                                         PHONE_NO varchar(15),
