@@ -359,7 +359,7 @@ def CM(): #COMPLETED
                 CM()
 
 if __name__ == '__main__':
-        student()
+        CM()
         
 
 
