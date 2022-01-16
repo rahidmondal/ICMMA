@@ -1,6 +1,10 @@
 #Neccessary Modules Below 
 
-import time,M1,M2
+import time
+import M1
+import M2
+
+
 time.sleep(2)
 
 

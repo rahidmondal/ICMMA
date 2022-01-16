@@ -4,7 +4,7 @@
 
 import time
 import mysql.connector
-import app
+import app 
 
 
       
@@ -165,12 +165,23 @@ def Teacher(): #completed
                         try :
                                 myc = mydb.cursor()
                                 myc.execute(f"SELECT * FROM TEACHER where ID = {ID}")
-                                C = myc.fetchall()
-                                print(C)
+                                Data = myc.fetchall()[0]
+                                a = ["ID","F_NAME","CLASS_TEACHER","PHONE_NO","SUBJECT_TEACHING","EMAIL"]
+                                print("-----------------------------Individual_Details-------------------")
+                                print(a[0],':',Data[0])
+                                print(a[1],':',Data[1])
+                                print(a[2],':',Data[2])
+                                print(a[3],':',Data[3])
+                                print(a[4],':',Data[4])
+                                print(a[5],':',Data[5])
+                                print("-------------------------------------------------------------------")
+
+
                         except:
                                 print("Error Fetching Data or Data Doesnt Exixts.")
                         finally:
                                 mydb.close()
+                                time.sleep(2)
                                 Teacher()
                 
                 else:
@@ -354,7 +365,7 @@ def CM(): #COMPLETED
                 CM()
 
 if __name__ == '__main__':
-        CM()
+        Teacher()
         
 
 
