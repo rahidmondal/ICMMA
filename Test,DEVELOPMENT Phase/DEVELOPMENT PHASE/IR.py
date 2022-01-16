@@ -1,14 +1,9 @@
 #Warning : Possibility of Erasing all available Data ....(Please Use ONLY IN FIRST TIME OR SYSYTEM CLEANUP !!)
-"""
-Program Status : Completed (06-01-2022).
-Program Name : IR.py - Intial Setup File .
-Description : This File Helps Us Setup the Initial Database and Required Tables For Program.
-Part Of : Contant Managemnt and Bulk Messege Sending Application 
-Author : 
-        1.RAHID MONDAL
-        2.PUSHPAM JHA 
+#Program Status : Completed (06-01-2022).
+#Program Name : IR.py - Intial Setup File .
+#Description : This File Helps Us Setup the Initial Database and Required Tables For Program.
+#Part Of : Contant Managemnt and Bulk Messege Sending Application 
 
-"""
 
 import mysql.connector,time
 def DBMS():       
