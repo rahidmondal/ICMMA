@@ -5,7 +5,7 @@ import M1
 import M2
 
 
-time.sleep(2)
+time.sleep(1)
 
 
 def MM():
@@ -17,7 +17,7 @@ def MM():
     print("4.Logout")
     Ch = input("Please Enter Your Choice : ")
     if Ch == '1':
-        time.sleep(5)
+        time.sleep(2)
         M1.CM()
 
     elif Ch == '2':
@@ -33,7 +33,7 @@ def MM():
        
     elif Ch == '4':
         print("Logging Out...............")
-        time.sleep(3)
+        time.sleep(2)
         print("Logout Succesfull At : ",time.ctime())
         print("**************************************************************************")
         time.sleep(100) #WILL AUTOMNATICALLY CLOSE IF NOT CLOSED WITHIN 100 SEC

@@ -11,7 +11,7 @@ import app
 def DBC(X): #COMPLETED 
 
         try: 
-                time.sleep(10)
+                time.sleep(2)
                 print("Connecting Database....")
                 mydb = mysql.connector.connect(host="localhost",
                 user="root",
@@ -48,20 +48,23 @@ def Teacher(): #completed
         """)
         tch = int(input("Please Enter your Chocie  : "))
         if tch == 1: #Completed
-                x = "Y"
-                if x=="Y":
-                        print(".........Teacher-Add-Form.................")
-                        ID = input("Enter ID :  ")
-                        F_NAME = input("Full Name : ")
-                        C_Teacher = input("ClassTeacher Of : ")
-                        PHONE_NO = input("Phone Number : ")
-                        Subject_Teaching = input("Intials of Subject Teaching : ")
-                        Email = input("Email : ")
-                        stm = "insert into teacher values('{}','{}','{}','{}','{}','{}')".format(ID,F_NAME,C_Teacher,PHONE_NO,Subject_Teaching,Email)
-                        DBC(stm)
-                        X = input("Do You Want To add more Data ?(Y/N) :  ")
-                time.sleep(5)
+
+                print(".........Teacher-Add-Form.................")
+                ID = input("Enter ID :  ")
+                F_NAME = input("Full Name : ")
+                C_Teacher = input("ClassTeacher Of : ")
+                PHONE_NO = input("Phone Number : ")
+                Subject_Teaching = input("Intials of Subject Teaching : ")
+                Email = input("Email : ")
+                stm = "insert into teacher values('{}','{}','{}','{}','{}','{}')".format(ID,F_NAME,C_Teacher,PHONE_NO,Subject_Teaching,Email)
+                DBC(stm)
+                print(f"Records with Id Number {ID} succesfully added !!")
+                input("Press Any key to Continue.")
                 Teacher()
+                
+
+                
+                
 
         elif tch == 2 : #Completed
                 print(".........Teacher-Edit-Form................")
@@ -75,7 +78,7 @@ def Teacher(): #completed
                 6.Email.
                 """)
 
-                while True:
+                while True :
                         Id = input("ID : ")
                         table_name = "Teacher"
                         colum = input("ENTER THE COLUM NAME : ")
@@ -92,12 +95,14 @@ def Teacher(): #completed
                         time.sleep(2)
                         mydb.close()
                         C = input("Do you wish to Edit more ?(Y/N) : ")
-                        if C == 'N':
-                                break
-                        else :
+                        if C == 'Y':
                                 continue
+                        else :
+                               break
+                                
+                                
 
-                Teacher()
+                
 
         elif tch == 3 : #Completed
                 print(".........Teacher-Delete-Form..............")
@@ -190,6 +195,10 @@ def Teacher(): #completed
                            
         elif tch == 5 : #COMPLTED
                 CM()
+
+        else :
+                Teacher()
+
       
 def student(): #COMPLETED
         print("...........................Student-Contacts....................")
@@ -201,20 +210,19 @@ def student(): #COMPLETED
         5.Go Back 
         """)
         tch = int(input("Please Enter your Chocie  : "))
-        if tch == 1: #Completed. - SOLVE THE LOOP ISSUE HERE 
-                x = "Y"
-                if x=="Y":
-                        print("...............Student-Add-Form...................")
-                        ID = input("ID : ")
-                        F_NAME = input("Full Name : ")
-                        Class = input("Class : ")
-                        PHONE_NO = input("Phone Number : ")
-                        Parents_Number = input("Parents Number : ")
-                        email = input("Email : ")
-                        En = "insert into STUDENT values('{}','{}','{}','{}','{}','{}')".format(ID,F_NAME,Class,PHONE_NO,Parents_Number,email)
-                        DBC(En)
-                        X = input("Do You Want To add more Data ?(Y/N) :  ")
-                time.sleep(5)
+        if tch == 1: #Completed. 
+
+                print("...............Student-Add-Form...................")
+                ID = input("ID : ")
+                F_NAME = input("Full Name : ")
+                Class = input("Class : ")
+                PHONE_NO = input("Phone Number : ")
+                Parents_Number = input("Parents Number : ")
+                email = input("Email : ")
+                En = "insert into STUDENT values('{}','{}','{}','{}','{}','{}')".format(ID,F_NAME,Class,PHONE_NO,Parents_Number,email)
+                DBC(En)
+                print(f"Records with Id Number {ID} succesfully added !!")
+                input("Press Any key to Continue..........")
                 student()
 
         elif tch == 2 : #COMPLETED 
