@@ -26,11 +26,6 @@ def Dc():
         pass
 
 
-def groupby(x,y):
-    pass
-
-def main():
-    pass
 
 
 
