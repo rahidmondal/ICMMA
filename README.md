@@ -1,8 +1,8 @@
 # ICMMA-INTEGRATED CONTACT MANAGEMENT & MESSEGING APLLICATION
-PROJECT NAME : INTEGRATED CONTACT MANAGEMENT & MESSEGING APLLICATION.
+PROJECT NAME : INTEGRATED CONTACT MANAGEMENT & MESSAGING APPLICATION.
 HIGH SCHOOL PROJECT.(CONSOLE BASED )
 
-Programing Language Used : Python 3.
+Programming Language Used : Python 3.
 Database : MySql
 Overview : Python Program with one part being Database Manupulation and other part being Web-Automation.
 
