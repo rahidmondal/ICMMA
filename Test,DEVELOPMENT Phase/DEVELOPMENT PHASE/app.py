@@ -1,28 +1,28 @@
 #Neccessary Modules Below 
 
-import time
-import M1
-import M2
+try :
+    import time
+    import M1
+    import M2
 
+except :
+    print("Module Import Failed Please Contact The Developer !!!")
 
 time.sleep(1)
-
-
 def MM():
-    print("----------------------------\ICMS/------------------------- ")
-    print("Welcome User !! ")
+    print("------------------------------Welcome User !!!---------------------------------")
     print("1.Contact Management  ")
     print("2.Messege System      ")
     print("3.ABOUT THE APPLICATION+MANUEL")
     print("4.Logout")
     Ch = input("Please Enter Your Choice : ")
     if Ch == '1':
-        time.sleep(2)
+        time.sleep(1)
         M1.CM()
 
     elif Ch == '2':
-        print("Work In Progress ..")
-        MM()
+        time.sleep(1)
+        M2.menue()
 
     elif Ch == '3' :
         with open("Manuel.txt")as f:
@@ -36,15 +36,18 @@ def MM():
         time.sleep(2)
         print("Logout Succesfull At : ",time.ctime())
         print("**************************************************************************")
-        time.sleep(100) #WILL AUTOMNATICALLY CLOSE IF NOT CLOSED WITHIN 100 SEC
- 
+        input("Input Any Key  to exit")
+
     else : 
         print("Invalid Selection !!! ")
         MM()
 
-def init(): #COMPLETED 
-    print("Application Starting.......")   
-    print("------------------------------Welcome User !!!-----------------------------------")   
+def init(): 
+    print("----------------------------------------------------------------------------")
+    print("        ICMMA-INTEGRATED CONTACT MANAGEMENT & MESSEGING APLLICATION  ")
+    print("----------------------------------------------------------------------------")
+    print("Application Starting.......")
+    time.sleep(2)      
     A = input("Please Enter USER_NAME :  ")
     if A == 'PUSHPAM' : 
         B = input("Please Enter Password : ")
@@ -62,7 +65,7 @@ def init(): #COMPLETED
             init()
 
 
-if  __name__ == "__main__": #COMPLETED
+if  __name__ == "__main__": 
     init()
 
 

@@ -2,9 +2,14 @@
 #Program Name : M1.py - Module 1 File  .
 #Description : This File Will Contain Feautures which will help in Contact Management .
 
-import time
-import mysql.connector
-import app 
+try : 
+        import time
+        import mysql.connector
+        import app 
+except :
+        print("Module Import Error Please Contact The Developer ")
+
+
 
 
       
