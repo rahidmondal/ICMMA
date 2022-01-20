@@ -2,8 +2,11 @@
 #Program Name : M2.py - Module 3 SEND MESSEGES MODULE   .
 #Description : This File Will Contain Feautures which will help in sending messeges .
 
-import webbrowser 
-import pyautogui as pg
+try : 
+    import webbrowser 
+    import pyautogui as pg
+except :
+    print("Module Import Error")
 
 def send_meessege():
     pass
