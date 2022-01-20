@@ -2,6 +2,9 @@
 #Program Name : M1.py - Module 1 File  .
 #Description : This File Will Contain Feautures which will help in Contact Management .
 
+from markupsafe import t
+
+
 try : 
         import time
         import mysql.connector
@@ -13,7 +16,7 @@ except :
 
 
       
-def DBC(X): #COMPLETED 
+def DBC(X): 
 
         try: 
                 time.sleep(2)
@@ -42,7 +45,7 @@ def DBC(X): #COMPLETED
                 print("Error Connecting To Database ")
 
                 
-def Teacher(): #completed 
+def Teacher(): 
         print("...........................Teacher-Contacts....................")
         print("""
         1.ADD
@@ -52,7 +55,7 @@ def Teacher(): #completed
         5.Go Back 
         """)
         tch = int(input("Please Enter your Chocie  : "))
-        if tch == 1: #Completed
+        if tch == 1: 
 
                 print(".........Teacher-Add-Form.................")
                 ID = input("Enter ID :  ")
@@ -71,7 +74,7 @@ def Teacher(): #completed
                 
                 
 
-        elif tch == 2 : #Completed
+        elif tch == 2 :
                 print(".........Teacher-Edit-Form................")
                 print("""
                 Chose From The following :
@@ -109,7 +112,7 @@ def Teacher(): #completed
 
                 
 
-        elif tch == 3 : #Completed
+        elif tch == 3 : 
                 print(".........Teacher-Delete-Form..............")
                 ID = input("Please Enter the ID : ")
                 try : 
@@ -143,7 +146,7 @@ def Teacher(): #completed
                 finally:
                         Teacher()
 
-        elif tch == 4 :  #Completed.
+        elif tch == 4 :  
                 print(".........Teacher-view-Form.................")
                 print("1.VIEW ALL TEACHER ")
                 print("2.View Individual ")
@@ -163,7 +166,14 @@ def Teacher(): #completed
                                         myc = mydb.cursor()
                                         myc.execute(f"SELECT * FROM TEACHER ")
                                         C = myc.fetchall()
+                                        print("ID \t Name \t Class_Teacher \t Phone \t S-Teaching \t Email")
                                         print(C)
+                                        #Need To Fixed For imporved User Experience 
+                                        for i in C :
+                                                pass
+                                                #print(i)
+                                                #print(i[0],i[1],i[2],i[3],i[4],i[5],i[6] ,sep='\t')
+                                        
                                 except:
                                         print("Error Fetching Data or Data Doesnt Exixts.")
                                 finally:
@@ -198,14 +208,14 @@ def Teacher(): #completed
                         print("Invalid Choice ")
                         Teacher()
                            
-        elif tch == 5 : #COMPLTED
+        elif tch == 5 :
                 CM()
 
         else :
                 Teacher()
 
       
-def student(): #COMPLETED
+def student():
         print("...........................Student-Contacts....................")
         print("""
         1.ADD
@@ -215,7 +225,7 @@ def student(): #COMPLETED
         5.Go Back 
         """)
         tch = int(input("Please Enter your Chocie  : "))
-        if tch == 1: #Completed. 
+        if tch == 1: 
 
                 print("...............Student-Add-Form...................")
                 ID = input("ID : ")
@@ -230,7 +240,7 @@ def student(): #COMPLETED
                 input("Press Any key to Continue..........")
                 student()
 
-        elif tch == 2 : #COMPLETED 
+        elif tch == 2 : 
                 print(".............Student-Edit-Form..................")
                 print("""
                 Chose From The following :
