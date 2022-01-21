@@ -2,7 +2,6 @@
 #Program Name : M1.py - Module 1 File  .
 #Description : This File Will Contain Feautures which will help in Contact Management .
 
-from markupsafe import t
 
 
 try : 
@@ -311,7 +310,7 @@ def student():
                         student()
 
                 
-        elif tch == 4 : #Completed
+        elif tch == 4 :
                 print(".............Student-View-Form...................")
                 print("1.VIEW ALL TEACHER ")
                 print("2.View Individual ")
@@ -379,9 +378,7 @@ def CM(): #COMPLETED
         
         elif CH== 3 :
                 time.sleep(2)
-                app.MM()
-
-                
+                app.MM()        
 
         else :
                 print("INVALID CHOICE PLEASE TRY AGAIN....")
