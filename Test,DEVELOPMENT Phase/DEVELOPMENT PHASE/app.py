@@ -36,7 +36,7 @@ def MM():
         time.sleep(2)
         print("Logout Succesfull At : ",time.ctime())
         print("**************************************************************************")
-        input("Input Any Key  to exit")
+        input("                       Input Any Key  to exit                             ")
 
     else : 
         print("Invalid Selection !!! ")
