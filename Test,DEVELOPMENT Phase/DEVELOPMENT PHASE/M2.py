@@ -3,8 +3,6 @@
 #Program Name : M2.py - Module 2 FETCH AND DISTRUBUTE MESSEGE MODULE   .
 #Description : This module will contain files which will hgelp in fecthing and grouping messeges .
 
-from email.message import Message
-
 
 try :
     import time ,app
@@ -14,7 +12,10 @@ except :
     print("Module import Failed - Contact Developer")
 
 
-def Dc():
+def MsgAll():
+    print("------------------------Messege-All-Number-------------------")
+    Message = input("Enter The Messege You Want To Send : \n ")
+    Number = []
     try : 
         print("Connecting to Datbase !!!")
             
@@ -26,27 +27,88 @@ def Dc():
         )
 
         print("Conenction Succesfull")
+        try :
+            myc = md.cursor()
+            myc.execute("Select Phone_NO FROM TEACHER")
+            TN = myc.fetchall()
+            Number.extend(TN)
+            myc.execute("Select Phone_NO FROM Student")
+            SP = myc.fetchall()
+            Number.extend(SP)
+            myc.execute("Select Parents_Phone FROM Student")
+            PrN= myc.fetchall()
+            Number.extend(PrN)
+
+        except :
+            print("Error Fecthing")
     except :
         print("Conenction Error ")
 
     finally :
+        md.close()
+
+    print(Number)
+    input("Press Any Key To Go Back To Menue Development Still Underway !!")
+    menue()
+
+def MsgTch():
+    print("---------------------------Messege-All-Teacher------------------")
+    Message = input("Enter The Messege You Want To Send : \n ")
+    Number = []
+    try : 
+        print("Connecting to Datbase !!!")
+            
+        md = mc.connect(
+            host="localhost",
+            user="root",
+            password="1234",
+            database = 'SCD'
+        )
+
+        print("Conenction Succesfull")
+        try :
+            myc = md.cursor()
+            myc.execute("Select Phone_NO FROM TEACHER")
+            TN = myc.fetchall()
+            Number.extend(TN)
+
+
+        except :
+            print("Error Fecthing")
+    except :
+        print("Conenction Error ")
+
+    finally :
+        md.close()
+    print(Number)
+    input("Press Any Key To Go Back To Menue Development Still Underway !!")
+    menue()
+
+
+
+def MsgCtm():
+    print("---------------------------------------------------------------------------------")
+    print("                        CUSTOM MESSEGING DASHBOARD                              ")
+    print("---------------------------------------------------------------------------------")
+    print("""
+    1.SELECT CLASS STUDENT
+    2.SELECT SUBJECT STUDENT
+    3.SELECT SUBJECT TEACHER 
+    4.ID FROM RANGE .
+    5.Go Back 
+    """)
+    Ch = int(input("Enter Your Choice : "))
+    if Ch == 1 :
         pass
-
-
-
-def MsgAll(M):
-    print("Development Underway")
-    menue()
-
-def MsgTch(M):
-    print("Development Underway")
-    menue()
-
-def MsgCtm(M):
-    print("Development Underway")
-    menue()
-
-
+    elif Ch == 2 :
+        pass
+    elif Ch == 3 :
+        pass
+    elif Ch == 4 :
+        pass
+    elif Ch == 5 :
+        time.sleep(2)
+        menue()
 
 def menue():
     PC = 'VBSS1234'
@@ -63,13 +125,12 @@ def menue():
     """
     )
     ch = int(input("Enter Your Choice : "))
-    Message = input("Enter The Messege You Want To Send : \n ")
     if ch == 1 :
-        MsgAll(Message)
+        MsgAll()
     elif ch == 2 :
-        MsgTch(Message)
+        MsgTch()
     elif ch == 3 :
-        MsgCtm(Message)
+        MsgCtm()
     elif ch == 4 :
         app.MM()
     else :
@@ -79,6 +140,7 @@ def menue():
 
 if __name__ == '__main__':
     menue()
+
 
 
 
