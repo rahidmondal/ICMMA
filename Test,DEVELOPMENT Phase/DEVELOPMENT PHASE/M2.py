@@ -3,9 +3,11 @@
 #Program Name : M2.py - Module 2 FETCH AND DISTRUBUTE MESSEGE MODULE   .
 #Description : This module will contain files which will hgelp in fecthing and grouping messeges .
 
+from tokenize import Number
+
 
 try :
-    import time ,app
+    import time ,app,M3
     import mysql.connector as mc
 
 except :
@@ -47,8 +49,12 @@ def MsgAll():
     finally :
         md.close()
 
-    print(Number)
-    input("Press Any Key To Go Back To Menue Development Still Underway !!")
+    for item in Number:
+        for i in item :
+            M3.send_meessege(i,Message)
+
+
+    time.sleep(1)
     menue()
 
 def MsgTch():
@@ -80,11 +86,45 @@ def MsgTch():
 
     finally :
         md.close()
-    print(Number)
-    input("Press Any Key To Go Back To Menue Development Still Underway !!")
+    for item in Number:
+        for i in item :
+            M3.send_meessege(i,Message)
+
+
+    time.sleep(1)
     menue()
 
+def f():
+    Number = []
+    try : 
+        print("Connecting to Datbase !!!")
+            
+        md = mc.connect(
+            host="localhost",
+            user="root",
+            password="1234",
+            database = 'SCD'
+        )
 
+        print("Conenction Succesfull")
+        try :
+            pass
+
+
+        except :
+            print("Error Fecthing")
+    except :
+        print("Conenction Error ")
+
+    finally :
+        md.close()
+
+    for item in Number:
+        for i in item :
+            M3.send_meessege(i)
+    return Number
+
+    
 
 def MsgCtm():
     print("---------------------------------------------------------------------------------")
@@ -94,24 +134,46 @@ def MsgCtm():
     1.SELECT CLASS STUDENT
     2.SELECT SUBJECT STUDENT
     3.SELECT SUBJECT TEACHER 
-    4.ID FROM RANGE .
-    5.Go Back 
+    4.ID FROM RANGE.
+    5.Send Messege To Group 
+    6.Go Back 
     """)
     Ch = int(input("Enter Your Choice : "))
     if Ch == 1 :
-        pass
+        X = input("SELECT THE CLASS WHERE YOU WANT TO FIND THE STUDNET OF : ")
+        Message = input("Enter Messege You want To Send : \n ")
+        print(f"THE Following Messege will be Send to {X} ; \n {Message}")
+
     elif Ch == 2 :
-        pass
+        X = input("INPUT THE SUBJECT INITIALS/CODE : ")
+        Message = input("Enter Messege You want To Send : \n ")
+        print(f"THE Following Messege will be Send to Students Having  {X}  ; \n {Message}")
+        Pass = input("To Continue Execution Enter Passcode : ")
+ 
+        
     elif Ch == 3 :
-        pass
+        X = input("INPUT THE SUBJECT(Teachers) INITIALS/CODE : ")
+        Message = input("Enter Messege You want To Send : \n ")
+        print(f"THE Following Messege will be Send to Teachers Having  {X}  ; \n {Message}")
+
+        
+        
     elif Ch == 4 :
-        pass
+        X = input("Input Lower ID LIMIT : ")
+        Y = input("Input Upper ID LIMIT : ")
+        Message = input("Enter Messege You want To Send : \n ")
+
     elif Ch == 5 :
+        X = input("Enter Group Name ")
+        Message = input("Enter Messege You want To Send : \n ")
+        M3.send_messege_group(X,Message)
+        
+
+    elif Ch == 6 :
         time.sleep(2)
         menue()
 
-def menue():
-    PC = 'VBSS1234'
+def menue(): 
     print("----------------------------------Messege System-----------------------------------------")
     print("Warning : Caution Advised - Use Of this For Fake News Spreading is against Terms of Use ")
     print("-----------------------------------------------------------------------------------------")
@@ -139,7 +201,8 @@ def menue():
         menue()
 
 if __name__ == '__main__':
-    menue()
+    #menue()
+    MsgAll()
 
 
 

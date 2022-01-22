@@ -1,0 +1,7 @@
+This Page Have Details Of ID Formation (How to read ID Number )
+
+For Staff/Teacher 
+TS-(Year of Hiring)-(SUBJECT INTITIALS *)-(Unique Number 2 Digit)
+Eg - RAHID MONDAL -> TEACHING SOCIAL-SCIENCE & COMPUTER SCIENCE AND YEAR OF HIRING IS 2010 -> ID WILL BE 
+
+TS-
