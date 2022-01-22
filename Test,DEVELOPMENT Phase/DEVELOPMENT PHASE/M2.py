@@ -4,13 +4,12 @@
 #Description : This module will contain files which will hgelp in fecthing and grouping messeges .
 
 try :
-    import time ,app
+    import time ,app,M3
     import mysql.connector as mc
 
 except :
     print("Module import Failed - Contact Developer")
 
-PC = 'VBSS1234'
 def MsgAll():
     print("------------------------Messege-All-Number-------------------")
     Message = input("Enter The Messege You Want To Send : \n ")
@@ -46,8 +45,12 @@ def MsgAll():
     finally :
         md.close()
 
-    print(Number)
-    input("Press Any Key To Go Back To Menue Development Still Underway !!")
+    for item in Number:
+        for i in item :
+            M3.messege(i,Message)
+
+
+    time.sleep(1)
     menue()
 
 def MsgTch():
@@ -79,8 +82,12 @@ def MsgTch():
 
     finally :
         md.close()
-    print(Number)
-    input("Press Any Key To Go Back To Menue Development Still Underway !!")
+    for item in Number:
+        for i in item :
+            M3.messege(i,Message)
+
+
+    time.sleep(1)
     menue()
 
 
@@ -101,60 +108,32 @@ def MsgCtm():
         X = input("SELECT THE CLASS WHERE YOU WANT TO FIND THE STUDNET OF : ")
         Message = input("Enter Messege You want To Send : \n ")
         print(f"THE Following Messege will be Send to {X} ; \n {Message}")
-        Pass = input("To Continue Execution Enter Passcode : ")
-        if Pass == PC :
-            print("Messge Operation Initiated ...")
-
-        else :
-            print("Incorrect Passcode Operation Failed - Please Try Again !! ")
-            MsgCtm()
 
     elif Ch == 2 :
         X = input("INPUT THE SUBJECT INITIALS/CODE : ")
         Message = input("Enter Messege You want To Send : \n ")
         print(f"THE Following Messege will be Send to Students Having  {X}  ; \n {Message}")
         Pass = input("To Continue Execution Enter Passcode : ")
-        if Pass == PC :
-            print("Messge Operation Initiated ...")
-        
-        else :
-            print("Incorrect Passcode Operation Failed - Please Try Again !! ")
-            MsgCtm()
-            
+ 
         
     elif Ch == 3 :
         X = input("INPUT THE SUBJECT(Teachers) INITIALS/CODE : ")
         Message = input("Enter Messege You want To Send : \n ")
         print(f"THE Following Messege will be Send to Teachers Having  {X}  ; \n {Message}")
-        Pass = input("To Continue Execution Enter Passcode : ")
-        if Pass == PC :
-            print("Messge Operation Initiated ...")
-        
-        else :
-            print("Incorrect Passcode Operation Failed - Please Try Again !! ")
-            MsgCtm()
-            
+
         
         
     elif Ch == 4 :
         X = input("Input Lower ID LIMIT : ")
         Y = input("Input Upper ID LIMIT : ")
         Message = input("Enter Messege You want To Send : \n ")
-        print(f"THE Following Messege will be Send to Students ID FROM   {X} TO {Y} ; \n {Message}")
-        Pass = input("To Continue Execution Enter Passcode : ")
-        if Pass == PC :
-            print("Messge Operation Initiated ...")
-        
-        else :
-            print("Incorrect Passcode Operation Failed - Please Try Again !! ")
-            MsgCtm()
+
               
     elif Ch == 5 :
         time.sleep(2)
         menue()
 
-def menue():
-    
+def menue(): 
     print("----------------------------------Messege System-----------------------------------------")
     print("Warning : Caution Advised - Use Of this For Fake News Spreading is against Terms of Use ")
     print("-----------------------------------------------------------------------------------------")
@@ -182,7 +161,8 @@ def menue():
         menue()
 
 if __name__ == '__main__':
-    menue()
+    #menue()
+    MsgAll()
 
 
 
