@@ -3,6 +3,9 @@
 #Program Name : M2.py - Module 2 FETCH AND DISTRUBUTE MESSEGE MODULE   .
 #Description : This module will contain files which will hgelp in fecthing and grouping messeges .
 
+from tokenize import Number
+
+
 try :
     import time ,app,M3
     import mysql.connector as mc
@@ -92,7 +95,36 @@ def MsgTch():
     menue()
 
 def f():
-    pass
+    Number = []
+    try : 
+        print("Connecting to Datbase !!!")
+            
+        md = mc.connect(
+            host="localhost",
+            user="root",
+            password="1234",
+            database = 'SCD'
+        )
+
+        print("Conenction Succesfull")
+        try :
+            pass
+
+
+        except :
+            print("Error Fecthing")
+    except :
+        print("Conenction Error ")
+
+    finally :
+        md.close()
+
+    for item in Number:
+        for i in item :
+            M3.send_meessege(i)
+    return Number
+
+    
 
 def MsgCtm():
     print("---------------------------------------------------------------------------------")
