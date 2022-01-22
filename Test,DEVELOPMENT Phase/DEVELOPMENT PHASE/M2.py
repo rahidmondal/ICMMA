@@ -10,6 +10,7 @@ try :
 except :
     print("Module import Failed - Contact Developer")
 
+
 def MsgAll():
     print("------------------------Messege-All-Number-------------------")
     Message = input("Enter The Messege You Want To Send : \n ")
@@ -47,7 +48,7 @@ def MsgAll():
 
     for item in Number:
         for i in item :
-            M3.messege(i,Message)
+            M3.send_meessege(i,Message)
 
 
     time.sleep(1)
@@ -84,13 +85,14 @@ def MsgTch():
         md.close()
     for item in Number:
         for i in item :
-            M3.messege(i,Message)
+            M3.send_meessege(i,Message)
 
 
     time.sleep(1)
     menue()
 
-
+def f():
+    pass
 
 def MsgCtm():
     print("---------------------------------------------------------------------------------")
@@ -101,7 +103,8 @@ def MsgCtm():
     2.SELECT SUBJECT STUDENT
     3.SELECT SUBJECT TEACHER 
     4.ID FROM RANGE.
-    5.Go Back 
+    5.Send Messege To Group 
+    6.Go Back 
     """)
     Ch = int(input("Enter Your Choice : "))
     if Ch == 1 :
@@ -128,8 +131,13 @@ def MsgCtm():
         Y = input("Input Upper ID LIMIT : ")
         Message = input("Enter Messege You want To Send : \n ")
 
-              
     elif Ch == 5 :
+        X = input("Enter Group Name ")
+        Message = input("Enter Messege You want To Send : \n ")
+        M3.send_messege_group(X,Message)
+        
+
+    elif Ch == 6 :
         time.sleep(2)
         menue()
 
