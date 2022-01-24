@@ -148,6 +148,7 @@ def MsgCtm():
         X = input("SELECT THE CLASS WHERE YOU WANT TO FIND THE STUDNET OF : ")
         Message = input("Enter Messege You want To Send : \n ")
         print(f"THE Following Messege will be Send to {X} ; \n {Message}")
+        
 
     elif Ch == 2 :
         X = input("INPUT THE SUBJECT INITIALS/CODE : ")
@@ -160,7 +161,7 @@ def MsgCtm():
         X = input("INPUT THE SUBJECT(Teachers) INITIALS/CODE : ")
         Message = input("Enter Messege You want To Send : \n ")
         print(f"THE Following Messege will be Send to Teachers Having  {X}  ; \n {Message}")
-        
+
 
         
         
