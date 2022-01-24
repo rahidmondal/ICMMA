@@ -13,6 +13,9 @@ try :
 except :
     print("Module import Failed - Contact Developer")
 
+def sm(Num= int, Messege = str , H = int , M = int  ):
+    import pywhatkit as p  
+    p.sendwhatmsg(Num,Messege,H,M,15,True,5)
 
 def MsgAll():
     print("------------------------Messege-All-Number-------------------")
@@ -200,10 +203,18 @@ def menue():
         input("Press Any key to Continue!!")
         menue()
 
+
+
+
+
 if __name__ == '__main__':
     #menue()
-    MsgAll()
-
+    #MsgAll()
+    N = input("Enter Number : ")
+    Ms = input("Enter Messege : ")
+    H = int(input("Sending Hour : "))
+    M = int(input("Sending Min : "))
+    sm(N,Ms,16,52)
 
 
 
