@@ -7,15 +7,14 @@
 
 
 try :
-    import time ,app,M3
+    import time ,app
     import mysql.connector as mc
+    from pywhatkit import whats as w
 
 except :
     print("Module import Failed - Contact Developer")
 
-def sm(Num= int, Messege = str , H = int , M = int  ):
-    import pywhatkit as p  
-    p.sendwhatmsg(Num,Messege,H,M,15,True,5)
+
 
 def MsgAll():
     print("------------------------Messege-All-Number-------------------")
@@ -53,8 +52,10 @@ def MsgAll():
         md.close()
 
     for item in Number:
+        print("Following are the Numbers You will be sending Messege ...")
         for i in item :
-            M3.send_meessege(i,Message)
+            print(i)
+            w.sendwhatmsg_instantly(i,Message,15,True,5)
 
 
     time.sleep(1)
@@ -90,9 +91,10 @@ def MsgTch():
     finally :
         md.close()
     for item in Number:
+        print("Following are the Numbers You will be sending Messege ...")
         for i in item :
-            M3.send_meessege(i,Message)
-
+            print(i)
+            w.sendwhatmsg_instantly(i,Message,15,True,5)
 
     time.sleep(1)
     menue()
@@ -124,7 +126,7 @@ def f():
 
     for item in Number:
         for i in item :
-            M3.send_meessege(i)
+            pass
     return Number
 
     
@@ -158,6 +160,7 @@ def MsgCtm():
         X = input("INPUT THE SUBJECT(Teachers) INITIALS/CODE : ")
         Message = input("Enter Messege You want To Send : \n ")
         print(f"THE Following Messege will be Send to Teachers Having  {X}  ; \n {Message}")
+        
 
         
         
@@ -169,7 +172,7 @@ def MsgCtm():
     elif Ch == 5 :
         X = input("Enter Group Name ")
         Message = input("Enter Messege You want To Send : \n ")
-        M3.send_messege_group(X,Message)
+        w.sendwhatmsg_to_group_instantly(X,Message,15,True,5)
         
 
     elif Ch == 6 :
@@ -209,13 +212,7 @@ def menue():
 
 if __name__ == '__main__':
     #menue()
-    #MsgAll()
-    N = input("Enter Number : ")
-    Ms = input("Enter Messege : ")
-    H = int(input("Sending Hour : "))
-    M = int(input("Sending Min : "))
-    sm(N,Ms,16,52)
-
+    MsgAll()
 
 
 
