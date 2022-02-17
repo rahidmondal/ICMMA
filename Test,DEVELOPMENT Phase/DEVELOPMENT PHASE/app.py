@@ -44,7 +44,7 @@ def MM():
 
 def init(): 
     print("----------------------------------------------------------------------------")
-    print("        ICMMA-INTEGRATED CONTACT MANAGEMENT & MESSEGING APLLICATION  ")
+    print("        ICMMA-INTEGRATED CONTACT MANAGEMENT & MESSEGING APLLICATION         ")
     print("----------------------------------------------------------------------------")
     print("Application Starting.......")
     time.sleep(2)      
