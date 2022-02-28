@@ -13,7 +13,7 @@ def DBMS():
             user="root",
             password="1234"
             )
-        print("Connection Succesfull With Host at",time.ctime())
+        print("Connection Succesful With Host at",time.ctime())
         try:
             
             mycursor = mydb.cursor()
@@ -42,7 +42,7 @@ def DBMS():
                 print("Teachers Table Created ")
 
                 try:
-                    print("Craeting Table student")
+                    print("Creating Table student")
                     time.sleep(5)
                     mycursor.execute("""CREATE TABLE student
                                         (ID varchar(10) Not Null ,
@@ -79,8 +79,8 @@ def DBMS():
         pass
   
 print("----------------------------------------------------")
-print("INTIAL SETUP BEGAINS !!")
-print("Warning : Please Dont Run This It will Delete ALL PREVIOUS DATA !! ")
+print("INITIAL SETUP BEGINS !!")
+print("Warning : Please Don't Run This It will Delete ALL PREVIOUS DATA !! ")
 ch = input("Do you wish To Continue(Y/N) : ")
 if ch == 'Y' :
     time.sleep(5)
