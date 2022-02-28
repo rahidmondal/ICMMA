@@ -1,7 +1,7 @@
 
 #Program Status : WORKING ETC - 17/01/2022
-#Program Name : M2.py - Module 2 FETCH AND DISTRUBUTE MESSEGE MODULE   .
-#Description : This module will contain files which will hgelp in fecthing and grouping messeges .
+#Program Name : M2.py - Module 2 FETCH AND DISTRUBUTE MESSaGE MODULE   .
+#Description : This module will contain files which will hgelp in fetching and grouping messages .
 
 from tokenize import Number
 
@@ -16,10 +16,10 @@ except :
 
 def MsgAll():
     print("------------------------Messege-All-Number-------------------")
-    Message = input("Enter The Messege You Want To Send : \n ")
+    Message = input("Enter The Message You Want To Send : \n ")
     Number = []
     try : 
-        print("Connecting to Datbase !!!")
+        print("Connecting to Database !!!")
             
         md = mc.connect(
             host="localhost",
@@ -28,7 +28,7 @@ def MsgAll():
             database = 'SCD'
         )
 
-        print("Conenction Succesfull")
+        print("Conenction Successful")
         try :
             myc = md.cursor()
             myc.execute("Select Phone_NO FROM TEACHER")
@@ -42,9 +42,9 @@ def MsgAll():
             Number.extend(PrN)
 
         except :
-            print("Error Fecthing")
+            print("Error Fetching")
     except :
-        print("Conenction Error ")
+        print("Connection Error ")
 
     finally :
         md.close()
@@ -59,10 +59,10 @@ def MsgAll():
 
 def MsgTch():
     print("---------------------------Messege-All-Teacher------------------")
-    Message = input("Enter The Messege You Want To Send : \n ")
+    Message = input("Enter The Message You Want To Send : \n ")
     Number = []
     try : 
-        print("Connecting to Datbase !!!")
+        print("Connecting to Database !!!")
             
         md = mc.connect(
             host="localhost",
@@ -71,7 +71,7 @@ def MsgTch():
             database = 'SCD'
         )
 
-        print("Conenction Succesfull")
+        print("Connection Successful")
         try :
             myc = md.cursor()
             myc.execute("Select Phone_NO FROM TEACHER")
@@ -80,9 +80,9 @@ def MsgTch():
 
 
         except :
-            print("Error Fecthing")
+            print("Error Fetching")
     except :
-        print("Conenction Error ")
+        print("Connection Error ")
 
     finally :
         md.close()
@@ -97,7 +97,7 @@ def MsgTch():
 def f():
     Number = []
     try : 
-        print("Connecting to Datbase !!!")
+        print("Connecting to Database !!!")
             
         md = mc.connect(
             host="localhost",
@@ -106,15 +106,15 @@ def f():
             database = 'SCD'
         )
 
-        print("Conenction Succesfull")
+        print("Connection Successful")
         try :
             pass
 
 
         except :
-            print("Error Fecthing")
+            print("Error Fetching")
     except :
-        print("Conenction Error ")
+        print("Connection Error ")
 
     finally :
         md.close()
@@ -128,44 +128,44 @@ def f():
 
 def MsgCtm():
     print("---------------------------------------------------------------------------------")
-    print("                        CUSTOM MESSEGING DASHBOARD                              ")
+    print("                        CUSTOM MESSAGING DASHBOARD                              ")
     print("---------------------------------------------------------------------------------")
     print("""
     1.SELECT CLASS STUDENT
     2.SELECT SUBJECT STUDENT
     3.SELECT SUBJECT TEACHER 
     4.ID FROM RANGE.
-    5.Send Messege To Group 
+    5.Send Message To Group 
     6.Go Back 
     """)
     Ch = int(input("Enter Your Choice : "))
     if Ch == 1 :
-        X = input("SELECT THE CLASS WHERE YOU WANT TO FIND THE STUDNET OF : ")
-        Message = input("Enter Messege You want To Send : \n ")
-        print(f"THE Following Messege will be Send to {X} ; \n {Message}")
+        X = input("SELECT THE CLASS WHERE YOU WANT TO FIND THE STUDENT OF : ")
+        Message = input("Enter Message You want To Send : \n ")
+        print(f"THE Following Message will be Sent to {X} ; \n {Message}")
 
     elif Ch == 2 :
         X = input("INPUT THE SUBJECT INITIALS/CODE : ")
-        Message = input("Enter Messege You want To Send : \n ")
-        print(f"THE Following Messege will be Send to Students Having  {X}  ; \n {Message}")
+        Message = input("Enter Message You want To Send : \n ")
+        print(f"THE Following Message will be Sent to Students Having  {X}  ; \n {Message}")
         Pass = input("To Continue Execution Enter Passcode : ")
  
         
     elif Ch == 3 :
         X = input("INPUT THE SUBJECT(Teachers) INITIALS/CODE : ")
-        Message = input("Enter Messege You want To Send : \n ")
-        print(f"THE Following Messege will be Send to Teachers Having  {X}  ; \n {Message}")
+        Message = input("Enter Message You want To Send : \n ")
+        print(f"THE Following Message will be Sent to Teachers Having  {X}  ; \n {Message}")
 
         
         
     elif Ch == 4 :
         X = input("Input Lower ID LIMIT : ")
         Y = input("Input Upper ID LIMIT : ")
-        Message = input("Enter Messege You want To Send : \n ")
+        Message = input("Enter Message You want To Send : \n ")
 
     elif Ch == 5 :
         X = input("Enter Group Name ")
-        Message = input("Enter Messege You want To Send : \n ")
+        Message = input("Enter Message You want To Send : \n ")
         M3.send_messege_group(X,Message)
         
 
@@ -174,14 +174,14 @@ def MsgCtm():
         menue()
 
 def menue(): 
-    print("----------------------------------Messege System-----------------------------------------")
+    print("----------------------------------Message System-----------------------------------------")
     print("Warning : Caution Advised - Use Of this For Fake News Spreading is against Terms of Use ")
     print("-----------------------------------------------------------------------------------------")
     print(
     """
-    1.Messege All Members of School (Teachers+Student) -> Notice/General Information.
-    2.Send Messege To all Teacher -> Official Notice[Priveledged]/Others
-    3.Custom Messege Send (Group/Individual Catogory)
+    1.Message All Members of School (Teachers+Student) -> Notice/General Information.
+    2.Send Message To all Teacher -> Official Notice[Priveledged]/Others
+    3.Custom Message Send (Group/Individual Catogory)
     4.Go Back 
 
     """
