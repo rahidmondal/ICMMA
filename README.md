@@ -1,5 +1,5 @@
 
-# ICMMA-INTEGRATED CONTACT MANAGEMENT & MESSEGING APLLICATION 
+# ICMMA-INTEGRATED CONTACT MANAGEMENT & MESSAGING APPLICATION 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 <p align="center"><img src=https://readme-typing-svg.herokuapp.com?font=Calibri&color=%23259076&size=26&lines=Hello+%F0%9F%91%8B%2C+To+ICMMA+repository></p>
