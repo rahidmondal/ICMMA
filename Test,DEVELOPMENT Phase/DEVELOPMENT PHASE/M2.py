@@ -130,19 +130,19 @@ def f():
     return Number
 
     
-
+"""
 def MsgCtm():
     print("---------------------------------------------------------------------------------")
     print("                        CUSTOM MESSEGING DASHBOARD                              ")
     print("---------------------------------------------------------------------------------")
-    print("""
-    1.SELECT CLASS STUDENT
-    2.SELECT SUBJECT STUDENT
-    3.SELECT SUBJECT TEACHER 
-    4.ID FROM RANGE.
-    5.Send Messege To Group 
-    6.Go Back 
-    """)
+    print(
+    #1.SELECT CLASS STUDENT
+    #2.SELECT SUBJECT STUDENT
+    #3.SELECT SUBJECT TEACHER 
+    #4.ID FROM RANGE.
+    #5.Send Messege To Group 
+    #6.Go Back 
+    )
     Ch = int(input("Enter Your Choice : "))
     if Ch == 1 :
         X = input("SELECT THE CLASS WHERE YOU WANT TO FIND THE STUDNET OF : ")
@@ -179,6 +179,7 @@ def MsgCtm():
     elif Ch == 6 :
         time.sleep(2)
         menue()
+"""
 
 def menue(): 
     print("----------------------------------Messege System-----------------------------------------")
@@ -188,8 +189,7 @@ def menue():
     """
     1.Messege All Members of School (Teachers+Student) -> Notice/General Information.
     2.Send Messege To all Teacher -> Official Notice[Priveledged]/Others
-    3.Custom Messege Send (Group/Individual Catogory)
-    4.Go Back 
+    3.Go Back 
 
     """
     )
@@ -199,9 +199,8 @@ def menue():
     elif ch == 2 :
         MsgTch()
     elif ch == 3 :
-        MsgCtm()
-    elif ch == 4 :
         app.MM()
+
     else :
         print("Invalid Choice !!!")
         input("Press Any key to Continue!!")
