@@ -312,7 +312,7 @@ def student():
                 
         elif tch == 4 :
                 print(".............Student-View-Form...................")
-                print("1.VIEW ALL TEACHER ")
+                print("1.VIEW ALL STUDENT ")
                 print("2.View Individual ")
                 x = input("Enter Choice : ")
                 try :
