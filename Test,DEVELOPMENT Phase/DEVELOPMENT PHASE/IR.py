@@ -13,7 +13,7 @@ def DBMS():
             user="root",
             password="1234"
             )
-        print("Connection Succesfull With Host at",time.ctime())
+        print("Connection Successful With Host at",time.ctime())
         try:
             
             mycursor = mydb.cursor()
@@ -79,8 +79,8 @@ def DBMS():
         pass
   
 print("----------------------------------------------------")
-print("INTIAL SETUP BEGAINS !!")
-print("Warning : Please Dont Run This It will Delete ALL PREVIOUS DATA !! ")
+print("INTIAL SETUP BEGINS !!")
+print("Warning : Please Don't Run This It will Delete ALL PREVIOUS DATA !! ")
 ch = input("Do you wish To Continue(Y/N) : ")
 if ch == 'Y' :
     time.sleep(5)
