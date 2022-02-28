@@ -31,11 +31,11 @@ def DBC(X):
                         myc = mydb.cursor()
                         myc.execute(X)
                         mydb.commit()
-                        print("Record Added Succesfully !!")
+                        print("Record Added Successfully !!")
                         
                 except :
                         mydb.rollback()
-                        print("Unssuccessfull Transaction .. ")
+                        print("Unsuccessful Transaction .. ")
 
                 finally :
                         mydb.close() 
@@ -53,7 +53,7 @@ def Teacher():
         4.VIEW
         5.Go Back 
         """)
-        tch = int(input("Please Enter your Chocie  : "))
+        tch = int(input("Please Enter your Choice  : "))
         if tch == 1: 
 
                 print(".........Teacher-Add-Form.................")
@@ -61,11 +61,11 @@ def Teacher():
                 F_NAME = input("Full Name : ")
                 C_Teacher = input("ClassTeacher Of : ")
                 PHONE_NO = input("Phone Number : ")
-                Subject_Teaching = input("Intials of Subject Teaching : ")
+                Subject_Teaching = input("Initials of Subject Teaching : ")
                 Email = input("Email : ")
                 stm = "insert into teacher values('{}','{}','{}','{}','{}','{}')".format(ID,F_NAME,C_Teacher,PHONE_NO,Subject_Teaching,Email)
                 DBC(stm)
-                print(f"Records with Id Number {ID} succesfully added !!")
+                print(f"Records with Id Number {ID} successfully added !!")
                 input("Press Any key to Continue.")
                 Teacher()
                 
@@ -76,7 +76,7 @@ def Teacher():
         elif tch == 2 :
                 print(".........Teacher-Edit-Form................")
                 print("""
-                Chose From The following :
+                Choose From The following :
                 1.ID
                 2.F_NAME
                 3.CLASS_TEACHER
@@ -88,7 +88,7 @@ def Teacher():
                 while True :
                         Id = input("ID : ")
                         table_name = "Teacher"
-                        colum = input("ENTER THE COLUM NAME : ")
+                        colum = input("ENTER THE COLUMN NAME : ")
                         value = input("Value : ")
                         mydb = mysql.connector.connect(host="localhost",
                                         user="root",
@@ -98,7 +98,7 @@ def Teacher():
                         myc = mydb.cursor()
                         myc.execute(f"Update {table_name} set {colum} = '{value}' where ID = {Id}")
                         mydb.commit()
-                        print("Record Added Succsfully ")
+                        print("Record Added Successfully ")
                         time.sleep(2)
                         mydb.close()
                         C = input("Do you wish to Edit more ?(Y/N) : ")
@@ -131,10 +131,10 @@ def Teacher():
                                                         
                                                 myc.execute("Delete from teacher where ID = '{}'".format(ID))
                                                 mydb.commit()
-                                                print("Records Deleted Succesfully !! ")
+                                                print("Records Deleted Successfully !! ")
                                         except:
                                                 mydb.rollback()
-                                                print("Transaction Unsuccesfull !!")
+                                                print("Transaction Unsuccessful !!")
                                         
                                         finally:
                                                 mydb.close()     
@@ -156,7 +156,7 @@ def Teacher():
                                 password="1234",
                                 database = 'SCD'
                                 )
-                                print("Database Connected Succesfully ")
+                                print("Database Connected Successfully ")
                 except :
                                 print("Erro Connecting Database...")
 
@@ -167,14 +167,14 @@ def Teacher():
                                         C = myc.fetchall()
                                         print("ID \t Name \t Class_Teacher \t Phone \t S-Teaching \t Email")
                                         print(C)
-                                        #Need To Fixed For imporved User Experience 
+                                        #Need To Fixed For improved User Experience 
                                         for i in C :
                                                 pass
                                                 #print(i)
                                                 #print(i[0],i[1],i[2],i[3],i[4],i[5],i[6] ,sep='\t')
                                         
                                 except:
-                                        print("Error Fetching Data or Data Doesnt Exixts.")
+                                        print("Error Fetching Data or Data Doesn't Exists.")
                                 finally:
                                         mydb.close()
                                         Teacher()
@@ -197,7 +197,7 @@ def Teacher():
 
 
                         except:
-                                print("Error Fetching Data or Data Doesnt Exixts.")
+                                print("Error Fetching Data or Data Doesn't Exists.")
                         finally:
                                 mydb.close()
                                 time.sleep(2)
@@ -223,7 +223,7 @@ def student():
         4.VIEW
         5.Go Back 
         """)
-        tch = int(input("Please Enter your Chocie  : "))
+        tch = int(input("Please Enter your Choice  : "))
         if tch == 1: 
 
                 print("...............Student-Add-Form...................")
@@ -254,7 +254,7 @@ def student():
                 while True:
                         Id = input("ID : ")
                         table_name = "student"
-                        colum = input("ENTER THE COLUM NAME : ")
+                        colum = input("ENTER THE COLUMN NAME : ")
                         value = input("Value : ")
                         mydb = mysql.connector.connect(host="localhost",
                                         user="root",
@@ -264,7 +264,7 @@ def student():
                         myc = mydb.cursor()
                         myc.execute(f"Update {table_name} set {colum} = '{value}' where ID = {Id}")
                         mydb.commit()
-                        print("Record Added Succsfully ")
+                        print("Record Added Successfully ")
                         time.sleep(2)
                         mydb.close()
                         C = input("Do you wish to Edit more ?(Y/N) : ")
@@ -295,10 +295,10 @@ def student():
                                                         
                                                 myc.execute("Delete from student where ID = '{}'".format(ID))
                                                 mydb.commit()
-                                                print("Records Deleted Succesfully !! ")
+                                                print("Records Deleted Successfully !! ")
                                         except:
                                                 mydb.rollback()
-                                                print("Transaction Unsuccesfull !!")
+                                                print("Transaction Unsuccessful !!")
                                         
                                         finally:
                                                 mydb.close()     
@@ -321,7 +321,7 @@ def student():
                                 password="1234",
                                 database = 'SCD'
                                 )
-                                print("Database Connected Succesfully ")
+                                print("Database Connected Successfully ")
                 except :
                                 print("Erro Connecting Database...")
 
@@ -332,7 +332,7 @@ def student():
                                         C = myc.fetchall()
                                         print(C)
                                 except:
-                                        print("Error Fetching Data or Data Doesnt Exixts.")
+                                        print("Error Fetching Data or Data Doesn't Exists.")
                                 finally:
                                         mydb.close()
                                         student()
@@ -345,7 +345,7 @@ def student():
                                 C = myc.fetchall()
                                 print(C)
                         except:
-                                print("Error Fetching Data or Data Doesnt Exixts.")
+                                print("Error Fetching Data or Data Doesn't Exists.")
                         finally:
                                 mydb.close()
                                 student()
