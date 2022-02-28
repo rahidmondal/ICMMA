@@ -18,10 +18,10 @@ except :
 
 def MsgAll():
     print("------------------------Messege-All-Number-------------------")
-    Message = input("Enter The Messege You Want To Send : \n ")
+    Message = input("Enter The Message You Want To Send : \n ")
     Number = []
     try : 
-        print("Connecting to Datbase !!!")
+        print("Connecting to Database !!!")
             
         md = mc.connect(
             host="localhost",
@@ -30,7 +30,7 @@ def MsgAll():
             database = 'SCD'
         )
 
-        print("Conenction Succesfull")
+        print("Connection Successful")
         try :
             myc = md.cursor()
             myc.execute("Select Phone_NO FROM TEACHER")
@@ -44,15 +44,15 @@ def MsgAll():
             Number.extend(PrN)
 
         except :
-            print("Error Fecthing")
+            print("Error Fetching")
     except :
-        print("Conenction Error ")
+        print("Connection Error ")
 
     finally :
         md.close()
 
     for item in Number:
-        print("Following are the Numbers You will be sending Messege ...")
+        print("Following are the Numbers You will be sending Message ...")
         for i in item :
             print(i)
             w.sendwhatmsg_instantly(i,Message,15,True,5)
@@ -63,10 +63,10 @@ def MsgAll():
 
 def MsgTch():
     print("---------------------------Messege-All-Teacher------------------")
-    Message = input("Enter The Messege You Want To Send : \n ")
+    Message = input("Enter The Message You Want To Send : \n ")
     Number = []
     try : 
-        print("Connecting to Datbase !!!")
+        print("Connecting to Database !!!")
             
         md = mc.connect(
             host="localhost",
@@ -75,7 +75,7 @@ def MsgTch():
             database = 'SCD'
         )
 
-        print("Conenction Succesfull")
+        print("Connection Successful")
         try :
             myc = md.cursor()
             myc.execute("Select Phone_NO FROM TEACHER")
@@ -84,14 +84,14 @@ def MsgTch():
 
 
         except :
-            print("Error Fecthing")
+            print("Error Fetching")
     except :
-        print("Conenction Error ")
+        print("Connection Error ")
 
     finally :
         md.close()
     for item in Number:
-        print("Following are the Numbers You will be sending Messege ...")
+        print("Following are the Numbers You will be sending Message ...")
         for i in item :
             print(i)
             w.sendwhatmsg_instantly(i,Message,15,True,5)
@@ -102,7 +102,7 @@ def MsgTch():
 def f():
     Number = []
     try : 
-        print("Connecting to Datbase !!!")
+        print("Connecting to Database !!!")
             
         md = mc.connect(
             host="localhost",
@@ -111,15 +111,15 @@ def f():
             database = 'SCD'
         )
 
-        print("Conenction Succesfull")
+        print("Connection Successful")
         try :
             pass
 
 
         except :
-            print("Error Fecthing")
+            print("Error Fetching")
     except :
-        print("Conenction Error ")
+        print("Connection Error ")
 
     finally :
         md.close()
@@ -133,7 +133,7 @@ def f():
 """
 def MsgCtm():
     print("---------------------------------------------------------------------------------")
-    print("                        CUSTOM MESSEGING DASHBOARD                              ")
+    print("                        CUSTOM MESSAGING DASHBOARD                              ")
     print("---------------------------------------------------------------------------------")
     print(
     #1.SELECT CLASS STUDENT
@@ -182,13 +182,13 @@ def MsgCtm():
 """
 
 def menue(): 
-    print("----------------------------------Messege System-----------------------------------------")
+    print("----------------------------------Message System-----------------------------------------")
     print("Warning : Caution Advised - Use Of this For Fake News Spreading is against Terms of Use ")
     print("-----------------------------------------------------------------------------------------")
     print(
     """
-    1.Messege All Members of School (Teachers+Student) -> Notice/General Information.
-    2.Send Messege To all Teacher -> Official Notice[Priveledged]/Others
+    1.Message All Members of School (Teachers+Student) -> Notice/General Information.
+    2.Send Message To all Teacher -> Official Notice[Priveledged]/Others
     3.Go Back 
 
     """
