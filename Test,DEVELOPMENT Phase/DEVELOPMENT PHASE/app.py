@@ -12,8 +12,8 @@ time.sleep(1)
 def MM():
     print("------------------------------Welcome User !!!---------------------------------")
     print("1.Contact Management  ")
-    print("2.Messege System      ")
-    print("3.ABOUT THE APPLICATION+MANUEL")
+    print("2.Message System      ")
+    print("3.ABOUT THE APPLICATION+MANUAL")
     print("4.Logout")
     Ch = input("Please Enter Your Choice : ")
     if Ch == '1':
@@ -25,7 +25,7 @@ def MM():
         M2.menue()
 
     elif Ch == '3' :
-        with open("Manuel.txt")as f:
+        with open("Manual.txt")as f:
             d = f.read()
             print(d)
             time.sleep(10)
@@ -34,7 +34,7 @@ def MM():
     elif Ch == '4':
         print("Logging Out...............")
         time.sleep(2)
-        print("Logout Succesfull At : ",time.ctime())
+        print("Logout Successful At : ",time.ctime())
         print("**************************************************************************")
         input("                       Input Any Key  to exit                             ")
 
@@ -44,7 +44,7 @@ def MM():
 
 def init(): 
     print("----------------------------------------------------------------------------")
-    print("        ICMMA-INTEGRATED CONTACT MANAGEMENT & MESSEGING APLLICATION         ")
+    print("        ICMMA-INTEGRATED CONTACT MANAGEMENT & MESSAGING APLLICATION         ")
     print("----------------------------------------------------------------------------")
     print("Application Starting.......")
     time.sleep(2)      
@@ -52,7 +52,7 @@ def init():
     if A == 'PUSHPAM' : 
         B = input("Please Enter Password : ")
         if B == 'RAHID' :
-                print("Login In.......")
+                print("Logging In.......")
                 time.sleep(2)
                 print("Login Time : ",time.ctime())
                 MM()
